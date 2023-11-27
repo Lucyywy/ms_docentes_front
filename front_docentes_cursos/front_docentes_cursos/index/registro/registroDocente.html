@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>RRGISTRO DOCENTES</title>
+</head>
+<body>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <form id="docenteForm">
+        <label for="codigo">CODIGO:</label>
+        <input type="number" id="codigo" name="codigo" required>
+    
+        <label for="nombre">NOMBRE:</label>
+        <input type="text" id="nombre" name="nombre" required>
+    
+        <label for="ocupacion">OCUPACIÓN:</label>
+        <select id="ocupacion" name="ocupacion" required>
+        </select>
+    
+        <button type="submit">REGISTRAR DOCENTE</button>
+        <div id="mensajeError"></div>
+
+        <div id="mensajeExito" style="color: green;"></div>
+        <div id="mensajeError" style="color: red;"></div>
+    </form>
+    
+    <script src="../../js/docentes.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $("#docenteForm").submit(function(event) {
+                registrarDocente(event);
+            });
+        });
+    </script>
+</body>
+</html>
